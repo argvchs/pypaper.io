@@ -12,7 +12,7 @@ import pyclipper
 from functools import *
 
 pygame.init()
-pygame.display.set_caption("Papar.IO")
+pygame.display.set_caption("PyPapar.IO")
 screen = pygame.display.set_mode((1200, 750))
 screenalpha = screen.convert_alpha()
 RW, RH = RSIZE = screen.get_size()
