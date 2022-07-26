@@ -546,7 +546,7 @@ class Player(Base):
             if self.prepos != self.pprepos:
                 self.nextnearpos = getnearest(self.prepos, self.polygon)
             if (dist := getdist(self.nearpos, self.nextnearpos)) > SPEED // 2:
-                self.nearpos = moveto(self.nearpos, self.nextnearpos, dist)
+                self.nearpos = moveto(self.nearpos, self.nextnearpos, dist // 4)
         if getdist(self.areapos, self.prepos) > SPEED // 2:
             self.areapos = moveto(self.areapos, self.prepos, SPEED)
         self.pprepos = self.prepos
