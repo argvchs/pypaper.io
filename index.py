@@ -1,15 +1,18 @@
-import os, sys
+import os
+import sys
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 os.environ["SDL_VIDEO_CENTERED"] = "1"
+import decimal
+import math
+import random
+from decimal import Decimal
+from functools import *
+
+import pyclipper
 import pygame
 import pygame.gfxdraw
 from pygame.locals import *
-import math, decimal
-import random
-from decimal import Decimal
-import pyclipper
-from functools import *
 
 pygame.init()
 pygame.display.set_caption("PyPapar.IO")
@@ -28,7 +31,7 @@ POSLIST = [
 USEDPOS = []
 INF = Decimal("inf")
 SPEED = 3
-MAXDIST = 12
+MAXDIST = 4
 RADIUS = 10
 HITBUFFER = 7
 INITEDGE = 32
